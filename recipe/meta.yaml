@@ -1,13 +1,13 @@
 {% set name = "airflow-priority" %}
-{% set version = "0.2.1" %}
+{% set version = "0.2.2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/a/airflow-priority/airflow_priority-{{ version }}.tar.gz
-  sha256: dd234caf03fede91caa1b5f105bf9b36eb289a6856385cb33393091b4c4486ae
+  url: https://pypi.org/packages/source/a/airflow-priority/airflow_priority-{{ version }}.tar.gz
+  sha256: 7d2268f789462b317086c5439c50bbd19ea596dd77087cd476803c0e211d57b2
 
 build:
   number: 0
@@ -17,17 +17,18 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
     - hatchling
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - apache-airflow >=2,<3
   run_constrained:
     - airflow-config >=0.1.2
 
 test:
   requires:
+    - python ={{ python_min }}
     - pip
   commands:
     - pip check
