@@ -1,5 +1,5 @@
 {% set name = "airflow-priority" %}
-{% set version = "1.4.1" %}
+{% set version = "1.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/a/airflow-priority/airflow_priority-{{ version }}.tar.gz
-  sha256: e0e5e2441fca0bac65b5cf5f71eff00f02baa9a2532ea0268131155ee760e44a
+  sha256: 66e8ae7baa4017cd6815846fc9019b843080493b13223c709c65aba0406409c3
 
 build:
   number: 0
