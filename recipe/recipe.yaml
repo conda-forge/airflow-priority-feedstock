@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: airflow-priority
-  version: "1.6.3"
+  version: "1.6.4"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/a/airflow-priority/airflow_priority-${{ version }}.tar.gz
-  sha256: 4c3a430112662c7f48fdc6e84dcbb6a888036f57253eb0add8ad15e129a04758
+  sha256: b818de4c1708fd99dc3af639df50092f67f3db90e1f8ca9c5d7fb67b302071f9
 
 build:
   number: 0
